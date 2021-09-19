@@ -37,7 +37,7 @@ public class CustomerController {
 	      
 	      for (Customer customer : repository.findAll() ) {
 	    	  customers.add( customer );
-	    	  log.info(customer.toString());
+	    	  log.info( "" + customer );
 	      }
 	      log.info("");
 
@@ -51,8 +51,8 @@ public class CustomerController {
 	      // fetch customers by last name
 	      log.info("Customer found with findByLastName('Jane'):");
 	      log.info("--------------------------------------------");
-	      repository.findByLastName("Jane").forEach(Jane -> {
-	        log.info(Jane.toString());
+	      repository.findByLastName("Jane").forEach( jane -> {
+	        log.info( "" + jane );
 	      });
 	      
 	      log.info("");
