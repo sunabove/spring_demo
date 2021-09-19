@@ -17,7 +17,7 @@ public class CustomerController {
 	@Autowired 
 	CustomerRepository repository ; 
 	
-	@GetMapping("/customer.html")
+	@GetMapping("/Customer.html")
 	public String customer(Model model) {
 		
 		  //CustomerRepository c = new CustomerRepository(); 
@@ -61,6 +61,6 @@ public class CustomerController {
 	      
 	      model.addAttribute( "customers", customers ); 
 		
-		return "customer.html"; 
+		return "Customer.html"; 
 	}
 }
