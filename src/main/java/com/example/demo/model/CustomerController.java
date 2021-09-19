@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.model;
 
 import java.util.ArrayList;
 
@@ -9,8 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.demo.model.*;
-
 @Controller
 public class CustomerController {
 	
@@ -19,7 +17,7 @@ public class CustomerController {
 	@Autowired 
 	CustomerRepository repository ; 
 	
-	@GetMapping("/customer")
+	@GetMapping("/customer.html")
 	public String customer(Model model) {
 		
 		  //CustomerRepository c = new CustomerRepository(); 
@@ -63,6 +61,6 @@ public class CustomerController {
 	      
 	      model.addAttribute( "customers", customers ); 
 		
-		return "Customer.html"; 
+		return "customer.html"; 
 	}
 }
