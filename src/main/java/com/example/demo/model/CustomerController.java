@@ -22,11 +22,11 @@ public class CustomerController {
 		
 		  //CustomerRepository c = new CustomerRepository(); 
 		  // save a few customers
-	      repository.save(new Customer("Jack", "Bauer"));
-	      repository.save(new Customer("Chloe", "O'Brian"));
-	      repository.save(new Customer("Kim", "Bauer"));
-	      repository.save(new Customer("David", "Palmer"));
-	      repository.save(new Customer("Michelle", "Dessler"));
+	      repository.save(new Customer("Jack", "Jane"));
+	      repository.save(new Customer("Chloe", "Brain"));
+	      repository.save(new Customer("MyKim", "Jeae"));
+	      repository.save(new Customer("John", "Price"));
+	      repository.save(new Customer("Adam", "Bane"));
 
 	      // fetch all customers
 	      log.info("Customers found with findAll():");
@@ -49,15 +49,15 @@ public class CustomerController {
 	      log.info("");
 
 	      // fetch customers by last name
-	      log.info("Customer found with findByLastName('Bauer'):");
+	      log.info("Customer found with findByLastName('Jane'):");
 	      log.info("--------------------------------------------");
-	      repository.findByLastName("Bauer").forEach(bauer -> {
-	        log.info(bauer.toString());
+	      repository.findByLastName("Jane").forEach(Jane -> {
+	        log.info(Jane.toString());
 	      });
 	      
 	      log.info("");
 	      
-	      model.addAttribute( "result", "Success" );
+	      model.addAttribute( "result", "Good" );
 	      
 	      model.addAttribute( "customers", customers ); 
 		
