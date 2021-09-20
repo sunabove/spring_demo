@@ -24,3 +24,7 @@ hs_err_pid*
 src/main/resources/rebel-remote.xml
 target/classes/rebel-remote.xml
 /target
+.settings/.rebel-remote.xml.bak
+.settings/.rebel.xml.bak
+src/main/resources/rebel-remote.xml
+src/main/resources/rebel-remote.xml

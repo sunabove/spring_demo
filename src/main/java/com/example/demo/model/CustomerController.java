@@ -21,7 +21,7 @@ public class CustomerController {
 	public String customer(Model model) {
 		
 		  //CustomerRepository c = new CustomerRepository(); 
-		  // save a few customers
+		  //Insert customers
 	      repository.save(new Customer("Jack", "Jane"));
 	      repository.save(new Customer("Chloe", "Brain"));
 	      repository.save(new Customer("MyKim", "Jeae"));
