@@ -28,3 +28,4 @@ target/classes/rebel-remote.xml
 .settings/.rebel.xml.bak
 src/main/resources/rebel-remote.xml
 src/main/resources/rebel-remote.xml
+src/main/resources/rebel.xml

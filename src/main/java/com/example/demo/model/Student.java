@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
 import java.util.Date;
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
@@ -17,4 +19,7 @@ public class Student {
 	private Date birthDate;
 	@Enumerated(EnumType.STRING)
 	private Gender gender;
+	
+	@ManyToMany(mappedBy = "students", targetEntity=Course.class)
+	private Set<Student> courses;
 }
