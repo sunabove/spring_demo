@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.model;
 
 import java.util.ArrayList;
 
@@ -9,26 +9,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.demo.model.*;
+import lombok.extern.slf4j.Slf4j;
 
 @Controller
+@Slf4j
 public class CustomerController {
-	
-	private static final Logger log = LoggerFactory.getLogger(CustomerController.class);
 	
 	@Autowired 
 	CustomerRepository repository ; 
 	
-	@GetMapping("/customer")
+	@RequestMapping("/Customer.html")
 	public String customer(Model model) {
 		
 		  //CustomerRepository c = new CustomerRepository(); 
-		  // save a few customers
-	      repository.save(new Customer("Jack", "Bauer"));
-	      repository.save(new Customer("Chloe", "O'Brian"));
-	      repository.save(new Customer("Kim", "Bauer"));
-	      repository.save(new Customer("David", "Palmer"));
-	      repository.save(new Customer("Michelle", "Dessler"));
+		  //Insert customers
+	      repository.save(new Customer("Jack", "Jane"));
+	      repository.save(new Customer("Chloe", "Brain"));
+	      repository.save(new Customer("MyKim", "Jeae"));
+	      repository.save(new Customer("John", "Price"));
+	      repository.save(new Customer("Adam", "Bane"));
 
 	      // fetch all customers
 	      log.info("Customers found with findAll():");
@@ -39,7 +38,7 @@ public class CustomerController {
 	      
 	      for (Customer customer : repository.findAll() ) {
 	    	  customers.add( customer );
-	    	  log.info(customer.toString());
+	    	  log.info( "" + customer );
 	      }
 	      log.info("");
 
@@ -51,18 +50,18 @@ public class CustomerController {
 	      log.info("");
 
 	      // fetch customers by last name
-	      log.info("Customer found with findByLastName('Bauer'):");
+	      log.info("Customer found with findByLastName('Jane'):");
 	      log.info("--------------------------------------------");
-	      repository.findByLastName("Bauer").forEach(bauer -> {
-	        log.info(bauer.toString());
+	      repository.findByLastName("Jane").forEach( jane -> {
+	        log.info( "" + jane );
 	      });
 	      
 	      log.info("");
 	      
-	      model.addAttribute( "result", "Success" );
+	      model.addAttribute( "result", "Good" );
 	      
 	      model.addAttribute( "customers", customers ); 
 		
-		return "Customer.html"; 
+		return "Customer.html";
 	}
 }
