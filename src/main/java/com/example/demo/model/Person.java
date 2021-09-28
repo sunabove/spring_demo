@@ -14,7 +14,9 @@ public class Person {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	@Column(name = "name", length = 50, nullable = false, unique = false)
-	private String name;
+	private String firstName;
+    private String lastName;
+    
 	@Transient
 	private Integer age;
 	@Temporal(TemporalType.DATE)
